@@ -1,8 +1,14 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import FormControl from "@mui/material/FormControl";
+import Paper from "@mui/material/Paper";
+import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Avatar from "@mui/material/Avatar";
+import LockRoundedIcon from "@mui/icons-material/LockRounded";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import blue from "@mui/material/colors/blue";
 
 export default function Login() {
   return (
@@ -11,41 +17,66 @@ export default function Login() {
       sx={{
         minHeight: "100vh",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        gap: 2,
       }}
     >
-      <Box
+      <Paper
+        elevation={3}
         sx={{
-          boxShadow: 2,
-          px: 3,
-          py: 2,
+          p: 3,
+          width: "90vw",
+          minWidth: "18rem",
+          maxWidth: "24rem",
         }}
       >
-        <Typography
-          variant="h5"
-          component="h1"
-          sx={{
-            fontWeight: "medium",
-            color: "primary.main",
-            mb: 0.5,
-          }}
-        >
-          FreeGames
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          sx={{
-            color: "text.secondary",
-          }}
-        >
-          Get your favorite games for free!
-        </Typography>
-      </Box>
-      {/* Login Form */}
-      <form>
-        <FormControl></FormControl>
-      </form>
+        <Stack spacing={4}>
+          <div>
+            <Avatar sx={{ bgcolor: blue[100], mb: 1.5 }}>
+              <LockRoundedIcon />
+            </Avatar>
+            <Typography variant="h5" component="h1" fontWeight="medium">
+              Sign In Your Account
+            </Typography>
+            <Typography variant="caption" color="text.secondary">
+              Get your favorite games for free!
+            </Typography>
+          </div>
+          {/* Login Form */}
+          <form>
+            <Stack spacing={3}>
+              <TextField
+                type="email"
+                id="email"
+                label="Email"
+                variant="outlined"
+                fullWidth
+                autoComplete="off"
+              />
+              <TextField
+                type="password"
+                id="password"
+                label="Password"
+                variant="outlined"
+                fullWidth
+              />
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<LockOpenOutlinedIcon />}
+                sx={{ py: 2 }}
+              >
+                Sign In
+              </Button>
+            </Stack>
+          </form>
+        </Stack>
+      </Paper>
+      <Typography variant="caption" color="text.secondary">
+        Powered by Material UI | Developed by Zulham S
+      </Typography>
     </Container>
   );
 }
