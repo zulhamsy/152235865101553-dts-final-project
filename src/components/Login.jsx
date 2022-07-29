@@ -1,4 +1,6 @@
+// React
 import React from "react";
+// Component
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
@@ -6,8 +8,11 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
+import InputPassword from "./PasswordField";
+// Icon
 import LockRoundedIcon from "@mui/icons-material/LockRounded";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+// APIs
 import blue from "@mui/material/colors/blue";
 
 export default function Login() {
@@ -34,7 +39,15 @@ export default function Login() {
       >
         <Stack spacing={4}>
           <div>
-            <Avatar sx={{ bgcolor: blue[100], mb: 1.5 }}>
+            <Avatar
+              sx={{
+                bgcolor: blue[100],
+                mb: 2,
+                mx: "auto",
+                width: 56,
+                height: 56,
+              }}
+            >
               <LockRoundedIcon />
             </Avatar>
             <Typography variant="h5" component="h1" fontWeight="medium">
@@ -55,13 +68,7 @@ export default function Login() {
                 fullWidth
                 autoComplete="off"
               />
-              <TextField
-                type="password"
-                id="password"
-                label="Password"
-                variant="outlined"
-                fullWidth
-              />
+              <InputPassword />
               <Button
                 variant="contained"
                 size="large"
