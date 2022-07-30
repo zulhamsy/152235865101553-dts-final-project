@@ -8,9 +8,10 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
-import InputPassword from "./PasswordField";
+import PasswordField from "../components/PasswordField";
+import Link from "@mui/material/Link";
 // Icon
-import LockRoundedIcon from "@mui/icons-material/LockRounded";
+import SportsEsportsTwoToneIcon from "@mui/icons-material/SportsEsportsTwoTone";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 // APIs
 import blue from "@mui/material/colors/blue";
@@ -48,11 +49,20 @@ export default function Login() {
                 height: 56,
               }}
             >
-              <LockRoundedIcon />
+              <SportsEsportsTwoToneIcon fontSize="large" />
             </Avatar>
-            <Typography variant="h5" component="h1" fontWeight="medium">
-              Sign In Your Account
-            </Typography>
+            <Stack direction="row" alignItems="baseline" spacing={0.8}>
+              <Typography variant="h5" component="h1" fontWeight="medium">
+                Sign In to
+              </Typography>
+              <Typography
+                variant="h5"
+                fontWeight="medium"
+                color={() => blue[800]}
+              >
+                GameBlue
+              </Typography>
+            </Stack>
             <Typography variant="caption" color="text.secondary">
               Get your favorite games for free!
             </Typography>
@@ -67,8 +77,9 @@ export default function Login() {
                 variant="outlined"
                 fullWidth
                 autoComplete="off"
+                autoFocus
               />
-              <InputPassword />
+              <PasswordField />
               <Button
                 variant="contained"
                 size="large"
@@ -80,6 +91,12 @@ export default function Login() {
             </Stack>
           </form>
         </Stack>
+        <Typography component="p" variant="caption" mt={2} textAlign="center">
+          Don't have an account?{" "}
+          <Link underline="hover" href="/signup">
+            Create one
+          </Link>
+        </Typography>
       </Paper>
       <Typography variant="caption" color="text.secondary">
         Powered by Material UI | Developed by Zulham S
