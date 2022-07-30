@@ -1,5 +1,10 @@
 import React from "react";
+import SignUpInWrapper from "../components/SignUpInWrapper";
 
 export default function Register() {
-  return <div>Register</div>;
+  return (
+    <SignUpInWrapper>
+      <div>Register</div>
+    </SignUpInWrapper>
+  );
 }
