@@ -9,7 +9,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-export default function InputPassword() {
+export default function PasswordField() {
   const [values, setValues] = useState({
     password: "",
     showPassword: false,
