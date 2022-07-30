@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import PasswordField from "../components/PasswordField";
 import Link from "@mui/material/Link";
+import { Link as RouterLink } from "react-router-dom";
 // Icon
 import SportsEsportsTwoToneIcon from "@mui/icons-material/SportsEsportsTwoTone";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
@@ -93,7 +94,7 @@ export default function Login() {
         </Stack>
         <Typography component="p" variant="caption" mt={2} textAlign="center">
           Don't have an account?{" "}
-          <Link underline="hover" href="/signup">
+          <Link underline="hover" to="/signup" component={RouterLink}>
             Create one
           </Link>
         </Typography>
