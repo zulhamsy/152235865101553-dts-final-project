@@ -7,7 +7,12 @@ import blue from "@mui/material/colors/blue";
 
 export default function Header() {
   return (
-    <AppBar position="static" color="transparent" variant="outlined">
+    <AppBar
+      position="static"
+      color="transparent"
+      variant="outlined"
+      elevation={0}
+    >
       <Toolbar>
         <Typography
           fontWeight="normal"
