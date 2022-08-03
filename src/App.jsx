@@ -13,6 +13,7 @@ const App = () => {
       const response = await fetchLiveGames();
       const list = response.data;
       setGameList(list);
+      console.log("fetching");
     }
 
     fetchGame();

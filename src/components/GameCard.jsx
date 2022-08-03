@@ -24,7 +24,7 @@ export default function GameCard({ gameData }) {
           <Chip clickable label={gameData.genre} size="small" />
           <Chip clickable label={gameData.platform} size="small" />
         </Stack>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" maxWidth="20ch">
           {gameData.title}
         </Typography>
         <Typography variant="body2" color="text.secondary" maxWidth="40ch">
