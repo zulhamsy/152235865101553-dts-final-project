@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import App from "../App";
+import GameDetail from "../pages/GameDetail";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
@@ -14,6 +15,10 @@ export default function Routes() {
         {
           path: "",
           element: <Home />,
+        },
+        {
+          path: "detail/:gameId",
+          element: <GameDetail />,
         },
       ],
     },

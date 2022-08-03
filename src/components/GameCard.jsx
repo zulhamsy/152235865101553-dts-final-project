@@ -8,11 +8,13 @@ import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import { useNavigate } from "react-router-dom";
 
 export default function GameCard({ gameData }) {
+  const navigate = useNavigate();
   return (
     <Card sx={{ maxWidth: "max-content" }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => navigate(`/detail/${gameData.id}`)}>
         <CardMedia
           component="img"
           image={gameData.thumbnail}
