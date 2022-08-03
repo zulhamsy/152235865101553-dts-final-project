@@ -11,7 +11,7 @@ export default function Home() {
       <Typography variant="h4" component="h1" color="grey.600" mb={3}>
         Live Games
       </Typography>
-      <ListContainer list={gameList.slice(0, 10)} />
+      <ListContainer list={gameList.slice(0, 12)} />
     </Container>
   );
 }
