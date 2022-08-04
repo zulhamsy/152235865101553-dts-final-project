@@ -15,7 +15,7 @@ export default function Home() {
         Live Games
       </Typography>
       <ListContainer list={gameList.slice(0, maxList)} />
-      <Box textAlign="center" my={4}>
+      <Box textAlign="center" mt={4} mb={6}>
         <Button
           onClick={() => setMaxList(maxList + 12)}
           variant="outlined"
